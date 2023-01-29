@@ -35,4 +35,8 @@ test('pairs', t => {
 
   let obj6 = _({}).toPairs().fromPairs().value();
   t.deepEqual(obj6, []);
+
+  let obj7 = _([{}]).fromPairs().toPairs().value();
+  t.deepEqual(obj7, {})
+
 });
